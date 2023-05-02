@@ -1,0 +1,141 @@
+/* Start Variables */
+:root {
+    --main-color: rgb(24, 23, 29);
+    --second-color: rgb(28, 28, 36);
+    --third-color: #F9B17A;
+    --box-shadow: 0px 0px 5px 0px #263238;
+}
+/* End Variables */
+/* Start global rules */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-image: url("../images/main-background-blur.png");
+    background-size: cover;
+}
+* {
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::selection {
+    display: none;
+}
+/* End global rules */
+/* Start chat-container */
+.chat-container {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 100vb;
+    background-color: var(--second-color);
+    overflow-y: scroll;
+    box-shadow: var(--box-shadow);
+}
+.chat-container header {
+    margin: 0;
+    padding: 20px 0;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--third-color);
+    border-radius: 3px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--second-color);
+}
+.chat-container header i {
+    color: #FFF;
+    margin: 0 10px;
+}
+.chat-container header .dots {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+}
+.chat-container header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--second-color);
+    box-shadow: var(--box-shadow);
+    display: none;
+}
+.chat-container header .dots:hover + ul {
+    display: initial;
+}
+.chat-container header ul li {
+    padding: 15px;
+}
+.chat-container header ul li i {
+    margin: 0;
+    font-size: 20px;
+}
+.chat-container header ul li a {
+    margin-left: 15px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+.chat-container .chat {
+    margin: 20px 20px 30px;
+    display: flex;
+    position: relative;
+}
+.chat-container .chat::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #263238;
+}
+.chat-container .chat .image {
+    width: fit-content;
+    height: fit-content;
+}
+.chat-container .chat .image img {
+    width: 75px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 0 #000;
+    cursor: pointer;
+}
+.chat-container .chat .info-text {
+    margin-left: 15px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.chat-container .chat .info-text h3 {
+    margin: 0;
+    color: #FFF;
+    font-weight: 400;
+}
+.chat-container .chat .info-text .message {
+    margin: 10px 0 0;
+    color: #CCC;
+    overflow: hidden;
+    text-overflow: ellipse;
+    white-space: nowrap;
+}
+.chat-container .chat .info-text .time {
+    margin: 0;
+    color: #CCC;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+/* End chat-container */
